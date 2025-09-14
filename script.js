@@ -273,8 +273,12 @@ function initializeAdminPanel() {
 }
 
 function openAdminPanel() {
-    adminModal.style.display = 'block';
-    document.body.style.overflow = 'hidden';
+    adminModal.classList.add('open');
+    // Body scroll lock (including iOS): fix body position
+    const scrollY = window.scrollY || document.documentElement.scrollTop;
+    document.body.dataset.scrollY = String(scrollY);
+    document.body.classList.add('modal-open');
+    document.body.style.top = `-${scrollY}px`;
     
     if (!isAdminLoggedIn) {
         loginForm.style.display = 'block';
@@ -286,8 +290,12 @@ function openAdminPanel() {
 }
 
 function closeAdminPanel() {
-    adminModal.style.display = 'none';
-    document.body.style.overflow = 'auto';
+    adminModal.classList.remove('open');
+    // Restore body scroll position
+    const storedY = parseInt(document.body.dataset.scrollY || '0', 10);
+    document.body.classList.remove('modal-open');
+    document.body.style.top = '';
+    window.scrollTo(0, storedY);
 }
 
 function loginAdmin() {
