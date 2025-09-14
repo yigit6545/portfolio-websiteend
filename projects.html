@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projelerim - Frontend Developer Portföy</title>
+    <meta name="description" content="Frontend Developer projelerim. Modern web siteleri, mobil uyumlu tasarımlar ve kullanıcı dostu arayüzler.">
+    <meta name="keywords" content="projeler, web tasarım, frontend, portfolio, responsive, mobil uyumlu">
+    <meta name="author" content="Frontend Developer">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Projelerim - Frontend Developer">
+    <meta property="og:description" content="Modern web siteleri ve mobil uyumlu tasarımlar.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com/projects">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Projelerim - Frontend Developer">
+    <meta name="twitter:description" content="Modern web siteleri ve mobil uyumlu tasarımlar.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="mobile-optimization.css">
+    <link rel="stylesheet" href="navbar-fix.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <h2>Projelerim</h2>
+            </div>
+            <div class="loading-spinner">
+                <div class="spinner"></div>
+            </div>
+            <p>Yükleniyor...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar projects-page">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" style="text-decoration: none; color: inherit;">
+                    <h2>Portföy</h2>
+                </a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Ana Sayfa</a>
+                <a href="index.html#about" class="nav-link">Hakkımda</a>
+                <a href="index.html#skills" class="nav-link">Yetenekler</a>
+                <a href="index.html#services" class="nav-link">Hizmetler</a>
+                <a href="index.html#pricing" class="nav-link">Fiyatlar</a>
+                <a href="projects.html" class="nav-link active">Projelerim</a>
+                <a href="index.html#contact" class="nav-link">İletişim</a>
+                <button class="admin-btn" onclick="openAdminPanel()">Admin</button>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="projects-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Projelerim</h1>
+                <p class="hero-description">Modern teknolojiler kullanarak geliştirdiğim web projeleri. Her proje mobil uyumlu, hızlı ve kullanıcı dostu.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Filter -->
+    <section class="projects-filter">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Tümü</button>
+                <button class="filter-btn" data-filter="web">Web Sitesi</button>
+                <button class="filter-btn" data-filter="mobile">Mobil Uyumlu</button>
+                <button class="filter-btn" data-filter="ecommerce">E-Ticaret</button>
+                <button class="filter-btn" data-filter="portfolio">Portföy</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="projects-section">
+        <div class="container">
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="Canlı Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link" title="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-placeholder">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Web Sitesi</div>
+                        <h3 class="project-title">Kurumsal Web Sitesi</h3>
+                        <p class="project-description">Modern ve profesyonel kurumsal web sitesi. Responsive tasarım ve SEO optimizasyonu.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-category="ecommerce">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="Canlı Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link" title="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-placeholder">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">E-Ticaret</div>
+                        <h3 class="project-title">Online Mağaza</h3>
+                        <p class="project-description">Tam özellikli e-ticaret sitesi. Sepet, ödeme ve kullanıcı yönetimi sistemi.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Stripe</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card" data-category="mobile">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="Canlı Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link" title="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-placeholder">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Mobil Uyumlu</div>
+                        <h3 class="project-title">Restoran Uygulaması</h3>
+                        <p class="project-description">Mobil öncelikli restoran web uygulaması. Menü, rezervasyon ve online sipariş.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">PWA</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">CSS Grid</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card" data-category="portfolio">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="Canlı Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link" title="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Portföy</div>
+                        <h3 class="project-title">Kişisel Portföy</h3>
+                        <p class="project-description">Modern ve etkileyici kişisel portföy sitesi. Animasyonlar ve interaktif öğeler.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">GSAP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="Canlı Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link" title="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-placeholder">
+                            <i class="fas fa-blog"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Web Sitesi</div>
+                        <h3 class="project-title">Blog Platformu</h3>
+                        <p class="project-description">Modern blog platformu. Yazı yönetimi, yorum sistemi ve sosyal medya entegrasyonu.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">JWT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card" data-category="mobile">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="Canlı Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link" title="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-placeholder">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Mobil Uyumlu</div>
+                        <h3 class="project-title">Dashboard Uygulaması</h3>
+                        <p class="project-description">Responsive dashboard uygulaması. Grafikler, tablolar ve gerçek zamanlı veri.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">Chart.js</span>
+                            <span class="tech-tag">WebSocket</span>
+                            <span class="tech-tag">Sass</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="projects-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Projenizi Hayata Geçirelim</h2>
+                <p>Modern teknolojiler kullanarak hayalinizdeki web projesini birlikte oluşturalım.</p>
+                <a href="index.html#contact" class="btn btn-primary">Proje Başlat</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2024 Frontend Developer. Tüm hakları saklıdır.</p>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Admin Panel Modal -->
+    <div id="adminModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Admin Paneli</h3>
+                <span class="close" onclick="closeAdminPanel()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="loginForm" class="admin-form">
+                    <h4>Giriş Yap</h4>
+                    <div class="form-group">
+                        <input type="password" id="adminPassword" placeholder="Admin Şifresi" required>
+                    </div>
+                    <button onclick="loginAdmin()" class="btn btn-primary">Giriş Yap</button>
+                </div>
+                <div id="adminPanel" class="admin-panel" style="display: none;">
+                    <h4>Admin Kontrol Paneli</h4>
+                    <div class="admin-stats">
+                        <div class="stat-card">
+                            <h5>Toplam Ziyaretçi</h5>
+                            <p id="totalVisitors">1,234</p>
+                        </div>
+                        <div class="stat-card">
+                            <h5>Bugünkü Ziyaretçi</h5>
+                            <p id="todayVisitors">45</p>
+                        </div>
+                        <div class="stat-card">
+                            <h5>Mesaj Sayısı</h5>
+                            <p id="messageCount">12</p>
+                        </div>
+                    </div>
+                    <div class="admin-actions">
+                        <button onclick="updateStats()" class="btn btn-secondary">İstatistikleri Güncelle</button>
+                        <button onclick="exportData()" class="btn btn-outline">Veri Dışa Aktar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="projects.js"></script>
+</body>
+</html>

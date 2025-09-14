@@ -1,0 +1,73 @@
+/* Navbar Color Fix - Force colors to stay consistent */
+
+/* Force navbar to always be white */
+.navbar {
+    background: #ffffff !important;
+    color: #1f2937 !important;
+}
+
+/* Force all nav links to be dark */
+.nav-link {
+    color: #1f2937 !important;
+}
+
+.nav-link:hover {
+    color: #6366f1 !important;
+}
+
+/* Force logo to be purple */
+.nav-logo h2 {
+    color: #6366f1 !important;
+}
+
+/* Force admin button colors */
+.admin-btn {
+    background: #6366f1 !important;
+    color: white !important;
+}
+
+.admin-btn:hover {
+    background: #4f46e5 !important;
+    color: white !important;
+}
+
+/* Force hamburger bars to be dark */
+.bar {
+    background: #1f2937 !important;
+}
+
+/* Force mobile menu to be white */
+.nav-menu {
+    background: #ffffff !important;
+}
+
+.nav-menu a {
+    color: #1f2937 !important;
+}
+
+.nav-menu .admin-btn {
+    background: #6366f1 !important;
+    color: white !important;
+}
+
+/* Override any other styles that might interfere */
+.navbar * {
+    color: inherit !important;
+}
+
+.nav-link, .nav-logo h2, .admin-btn {
+    color: inherit !important;
+}
+
+/* Specific overrides */
+.nav-link {
+    color: #1f2937 !important;
+}
+
+.nav-logo h2 {
+    color: #6366f1 !important;
+}
+
+.admin-btn {
+    color: white !important;
+}

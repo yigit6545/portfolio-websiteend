@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Developer - Portföy | Modern Web Tasarım</title>
+    <meta name="description" content="Profesyonel Frontend Developer. Modern, responsive ve mobil uyumlu web siteleri tasarlıyorum. HTML5, CSS3, JavaScript, React uzmanı.">
+    <meta name="keywords" content="frontend developer, web tasarım, responsive tasarım, mobil uyumlu, HTML5, CSS3, JavaScript, React, Vue.js">
+    <meta name="author" content="Frontend Developer">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Frontend Developer - Portföy">
+    <meta property="og:description" content="Modern, responsive ve mobil uyumlu web siteleri tasarlıyorum.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Frontend Developer - Portföy">
+    <meta name="twitter:description" content="Modern, responsive ve mobil uyumlu web siteleri tasarlıyorum.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile-optimization.css">
+    <link rel="stylesheet" href="navbar-fix.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <h2>Portföy</h2>
+            </div>
+            <div class="loading-spinner">
+                <div class="spinner"></div>
+            </div>
+            <p>Yükleniyor...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Portföy</h2>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Ana Sayfa</a>
+                <a href="#about" class="nav-link">Hakkımda</a>
+                <a href="#skills" class="nav-link">Yetenekler</a>
+                <a href="#services" class="nav-link">Hizmetler</a>
+                <a href="#pricing" class="nav-link">Fiyatlar</a>
+                <a href="projects.html" class="nav-link">Projelerim</a>
+                <a href="#contact" class="nav-link">İletişim</a>
+                <button class="admin-btn" onclick="openAdminPanel()">Admin</button>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Merhaba, Ben <span class="highlight">Frontend Developer</span></h1>
+                <p class="hero-description">Modern, responsive ve kullanıcı dostu web siteleri tasarlıyorum. Mobil öncelikli yaklaşımla her cihazda mükemmel deneyim sunuyorum.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Proje Başlat</a>
+                    <a href="#about" class="btn btn-secondary">Daha Fazla Bilgi</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="code-animation">
+                    <div class="code-line"></div>
+                    <div class="code-line"></div>
+                    <div class="code-line"></div>
+                    <div class="code-line"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Hakkımda</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Yaratıcı Frontend Developer</h3>
+                    <p>5+ yıllık deneyimimle modern web teknolojileri kullanarak kullanıcı odaklı çözümler geliştiriyorum. Her projede en iyi performansı ve kullanıcı deneyimini hedefliyorum.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h4>50+</h4>
+                            <p>Tamamlanan Proje</p>
+                        </div>
+                        <div class="stat">
+                            <h4>5+</h4>
+                            <p>Yıl Deneyim</p>
+                        </div>
+                        <div class="stat">
+                            <h4>100%</h4>
+                            <p>Müşteri Memnuniyeti</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="profile-card">
+                        <div class="profile-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h4>Frontend Developer</h4>
+                        <p>Modern Web Çözümleri</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Kod Yeteneklerim</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="95%"></div>
+                    </div>
+                    <span class="skill-percentage">95%</span>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <i class="fab fa-css3-alt"></i>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="90%"></div>
+                    </div>
+                    <span class="skill-percentage">90%</span>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <i class="fab fa-js-square"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="85%"></div>
+                    </div>
+                    <span class="skill-percentage">85%</span>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <i class="fab fa-react"></i>
+                        <span>React</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="80%"></div>
+                    </div>
+                    <span class="skill-percentage">80%</span>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <i class="fab fa-vue"></i>
+                        <span>Vue.js</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="75%"></div>
+                    </div>
+                    <span class="skill-percentage">75%</span>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <i class="fab fa-node-js"></i>
+                        <span>Node.js</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="70%"></div>
+                    </div>
+                    <span class="skill-percentage">70%</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Hizmetlerim</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Web Tasarım</h3>
+                    <p>Modern, responsive ve kullanıcı dostu web siteleri tasarlıyorum. Her cihazda mükemmel görünüm.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobil Uyumluluk</h3>
+                    <p>Mobil öncelikli yaklaşımla tüm cihazlarda sorunsuz çalışan web çözümleri geliştiriyorum.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Performans Optimizasyonu</h3>
+                    <p>Hızlı yüklenen, SEO dostu ve performans odaklı web siteleri oluşturuyorum.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>UI/UX Tasarım</h3>
+                    <p>Kullanıcı deneyimini ön planda tutan, estetik ve fonksiyonel arayüzler tasarlıyorum.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2 class="section-title">Fiyatlandırma</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Başlangıç</h3>
+                        <div class="price">
+                            <span class="currency">₺</span>
+                            <span class="amount">2,500</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Responsive Tasarım</li>
+                        <li><i class="fas fa-check"></i> 5 Sayfa</li>
+                        <li><i class="fas fa-check"></i> Mobil Uyumlu</li>
+                        <li><i class="fas fa-check"></i> Temel SEO</li>
+                        <li><i class="fas fa-check"></i> 1 Ay Destek</li>
+                    </ul>
+                    <button class="btn btn-outline">Seç</button>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Popüler</div>
+                    <div class="pricing-header">
+                        <h3>Profesyonel</h3>
+                        <div class="price">
+                            <span class="currency">₺</span>
+                            <span class="amount">5,000</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Responsive Tasarım</li>
+                        <li><i class="fas fa-check"></i> 10 Sayfa</li>
+                        <li><i class="fas fa-check"></i> Mobil Uyumlu</li>
+                        <li><i class="fas fa-check"></i> Gelişmiş SEO</li>
+                        <li><i class="fas fa-check"></i> Admin Panel</li>
+                        <li><i class="fas fa-check"></i> 3 Ay Destek</li>
+                    </ul>
+                    <button class="btn btn-primary">Seç</button>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Kurumsal</h3>
+                        <div class="price">
+                            <span class="currency">₺</span>
+                            <span class="amount">10,000</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Responsive Tasarım</li>
+                        <li><i class="fas fa-check"></i> Sınırsız Sayfa</li>
+                        <li><i class="fas fa-check"></i> Mobil Uyumlu</li>
+                        <li><i class="fas fa-check"></i> Premium SEO</li>
+                        <li><i class="fas fa-check"></i> Gelişmiş Admin Panel</li>
+                        <li><i class="fas fa-check"></i> 6 Ay Destek</li>
+                        <li><i class="fas fa-check"></i> Özel Özellikler</li>
+                    </ul>
+                    <button class="btn btn-outline">Seç</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">İletişim</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>E-posta</h4>
+                            <p>info@frontenddev.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Telefon</h4>
+                            <p>+90 555 123 45 67</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Konum</h4>
+                            <p>İstanbul, Türkiye</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Adınız" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="E-posta" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Konu" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Mesajınız" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Mesaj Gönder</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2024 Frontend Developer. Tüm hakları saklıdır.</p>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Admin Panel Modal -->
+    <div id="adminModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Admin Paneli</h3>
+                <span class="close" onclick="closeAdminPanel()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="loginForm" class="admin-form">
+                    <h4>Giriş Yap</h4>
+                    <div class="form-group">
+                        <input type="password" id="adminPassword" placeholder="Admin Şifresi" required>
+                    </div>
+                    <button onclick="loginAdmin()" class="btn btn-primary">Giriş Yap</button>
+                </div>
+                <div id="adminPanel" class="admin-panel" style="display: none;">
+                    <h4>Admin Kontrol Paneli</h4>
+                    <div class="admin-stats">
+                        <div class="stat-card">
+                            <h5>Toplam Ziyaretçi</h5>
+                            <p id="totalVisitors">1,234</p>
+                        </div>
+                        <div class="stat-card">
+                            <h5>Bugünkü Ziyaretçi</h5>
+                            <p id="todayVisitors">45</p>
+                        </div>
+                        <div class="stat-card">
+                            <h5>Mesaj Sayısı</h5>
+                            <p id="messageCount">12</p>
+                        </div>
+                    </div>
+                    <div class="admin-actions">
+                        <button onclick="updateStats()" class="btn btn-secondary">İstatistikleri Güncelle</button>
+                        <button onclick="exportData()" class="btn btn-outline">Veri Dışa Aktar</button>
+                        <button onclick="showAnalytics()" class="btn btn-primary">Analytics Görüntüle</button>
+                        <button onclick="showMessages()" class="btn btn-success">Mesajları Görüntüle</button>
+                        <button onclick="showSettings()" class="btn btn-warning">Site Ayarları</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
