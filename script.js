@@ -12,6 +12,9 @@ let isAdminLoggedIn = false;
 
 // Initialize the application
 document.addEventListener('DOMContentLoaded', function() {
+    // Ensure page starts at top
+    window.scrollTo(0, 0);
+    
     initializeLoadingScreen();
     initializeNavigation();
     initializeScrollAnimations();
@@ -58,6 +61,8 @@ function initializeLoadingScreen() {
             loadingScreen.classList.add('hidden');
             setTimeout(() => {
                 loadingScreen.style.display = 'none';
+                // Ensure page is at top after loading
+                window.scrollTo(0, 0);
             }, 500);
         }, 1500); // Show loading for 1.5 seconds
     });
